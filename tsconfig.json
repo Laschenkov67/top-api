@@ -11,6 +11,8 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
+    "strict": true,
+	  "strictPropertyInitialization": false, //Используем классы как интерфейсы
     "skipLibCheck": true
   }
 }
