@@ -12,6 +12,7 @@ import { ReviewModule } from './review/review.module';
     ProductModule, 
     ReviewModule, 
     TopPageModule
+  
   ],
   controllers: [AppController],
   providers: [AppService],
