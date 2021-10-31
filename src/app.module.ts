@@ -7,7 +7,12 @@ import { TopPageModule } from './top-page/top-page.module';
 import { ReviewModule } from './review/review.module';
 
 @Module({
-  imports: [ProductModule, AuthModule, TopPageModule, ReviewModule],
+  imports: [
+    AuthModule, 
+    ProductModule, 
+    ReviewModule, 
+    TopPageModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
