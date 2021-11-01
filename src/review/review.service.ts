@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { ModelType, DocumentType } from '@typegoose/typegoose/lib/types';
 import { Types } from 'mongoose';
 import { InjectModel } from 'nestjs-typegoose';
+import { BehaviorSubject, from, Observable } from 'rxjs';
 import { CreateReviewDto } from './dto/create-review.dto';
 import { ReviewModel } from './review.model';
 
@@ -10,6 +11,11 @@ export class ReviewService {
 	constructor(@InjectModel(ReviewModel) private readonly reviewModel: ModelType<ReviewModel>) { }
 
 	async create(dto: CreateReviewDto): Promise<DocumentType<ReviewModel>> {
+		return this.reviewModel.create(dto);
+	}
+
+    
+    create1(dto: CreateReviewDto): Promise<DocumentType<ReviewModel>> {
 		return this.reviewModel.create(dto);
 	}
 
